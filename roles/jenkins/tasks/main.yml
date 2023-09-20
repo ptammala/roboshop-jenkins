@@ -1,0 +1,7 @@
+- name : Crete Multibranch Pipeline Jobs
+  ansible.builtin.include_task:
+    file: mjob.yml
+
+- name : Crete Singlebranch Pipeline Jobs
+  ansible.builtin.include_task:
+    file: sjob.yml
