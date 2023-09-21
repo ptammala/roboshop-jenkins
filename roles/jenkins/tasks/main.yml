@@ -1,9 +1,11 @@
-- name: Crete Multibranch Pipeline Jobs
-  ansible.builtin.include_task:
-    file: mjob.yml
-  loop: "{ mjobs }"
 
-- name : Crete Singlebranch Pipeline Jobs
-  ansible.builtin.include_task:
-    file: sjob.yml
-  loop: "{ sjobs }"
+
+    - name: Create Multibranch Pipeline Jobs
+      ansible.builtin.include_tasks:
+        file: mjob.yml
+      loop: "{{ mjobs }}"
+
+    - name: Create Single Branch Pipeline Jobs
+      ansible.builtin.include_tasks:
+        file: sjob.yml
+      loop: "{{ sjobs }}"
