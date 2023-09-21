@@ -1,4 +1,4 @@
-- name : Crete Multibranch Pipeline Jobs
+- name: Crete Multibranch Pipeline Jobs
   ansible.builtin.include_task:
     file: mjob.yml
   loop: "{ mjobs }"
