@@ -6,3 +6,4 @@
 - name : Crete Singlebranch Pipeline Jobs
   ansible.builtin.include_task:
     file: sjob.yml
+  loop: "{ sjobs }"
