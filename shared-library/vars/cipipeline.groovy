@@ -39,7 +39,6 @@ def call(message)
             }
             stage('Release') {
                 steps {
-
                     echo 'Hello World'
                 }
             }
