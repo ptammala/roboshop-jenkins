@@ -1,9 +1,9 @@
-- name: Copy Config file - {{ item.folder_name }}
+- name: Copy Config file - "{{ item.folder_name }}"
   ansible.builtin.template:
     src: folder.xml
     dest: /tmp/folder.xml
 
-- name: Create a Job - {{ item.folder_name }}
+- name: Create a Job - "{{ item.folder_name }}"
   community.general.jenkins_job:
     config: "{{ lookup('file', '/tmp/folder.xml') }}"
     name: "{{ item.job_name }}"
