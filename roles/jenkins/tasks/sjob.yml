@@ -1,4 +1,4 @@
-- name: Copy Config file
+- name: Copy Config file - {{ item.job_name}}
   ansible.builtin.template:
     src: sjob.xml
     dest: /tmp/sjob.xml
