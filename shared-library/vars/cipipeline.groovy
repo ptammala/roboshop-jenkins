@@ -15,11 +15,8 @@ def call(message)
         stages {
             stage('Compile') {
                 steps {
-                    echo 'Hello World'
-                    script{
-                        info 'Starting'
-                        warning 'Nothing to do!'
-                    }
+                    sh 'env'
+
                 }
             }
             stage('Test') {
@@ -37,7 +34,7 @@ def call(message)
                     echo 'Hello World'
                 }
             }
-            stage('App Deploy') {
+            stage('Release') {
                 steps {
                     echo 'Hello World'
                 }
