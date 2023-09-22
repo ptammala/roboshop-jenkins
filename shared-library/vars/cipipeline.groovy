@@ -41,6 +41,7 @@ def call(message)
 
                 steps {
                     echo 'Hello World'
+                    sh 'env'
                 }
             }
         }
