@@ -22,7 +22,8 @@ def call(message)
             }
             stage('Test') {
                 when {
-                    expression { BRANCH_NAME == "*." }
+                    expression { env.BRANCH_NAME == "*." }
+
                 }
                 steps {
                     echo 'Hello World'
