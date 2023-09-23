@@ -25,14 +25,15 @@ def call(message)
                 }
             }
             stage('Code Quality') {
-                when {
-                    expression { BRANCH_NAME == 'main' }
-                }
+
                 steps {
                     echo 'Hello World'
                 }
             }
             stage('Code Security') {
+                when {
+                    expression { BRANCH_NAME == 'main' }
+                }
                 steps {
                     echo 'Hello World'
                 }
