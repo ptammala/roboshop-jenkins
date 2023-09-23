@@ -31,7 +31,7 @@ def call(message)
             stage('Code Quality') {
                 when {
                     anyOf {
-                        expression { BRANCH_NAME != null }
+                        expression { env.BRANCH_NAME != null }
                         expression { env.TAG_NAME == null }
                     }
                 }
