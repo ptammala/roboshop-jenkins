@@ -6,8 +6,30 @@ def warning(message) {
     echo "WARNING: ${message}"
 }
 
-def call(message)
-{
+def call(message) {
+
+    node('workstation')
+            {
+                stage('Compile Code') {
+                    print 'Hello World'
+                }
+                stage('Test') {
+                    print 'Hello World'
+                }
+                stage('Code Quality') {
+                    print 'Hello World'
+                }
+                stage('Compile Security') {
+                    print 'Hello World'
+                }
+                stage('Release') {
+                    print 'Hello World'
+                }
+            }
+}
+
+
+
 
     pipeline {
         agent any
