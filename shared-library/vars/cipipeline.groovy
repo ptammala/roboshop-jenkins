@@ -14,19 +14,26 @@ def call(message)
 
         stages {
             stage('Compile') {
+
                 steps {
                     sh 'env'
 
                 }
             }
             stage('Test') {
+                when {
+                    expression { BRANCH_NAME == "*." }
+                }
                 steps {
                     echo 'Hello World'
                 }
             }
             stage('Code Quality') {
                 when {
-                    expression { BRANCH_NAME == 'main' }
+                    allof {
+                        expression { BRANCH_NAME != null }
+                        expression { env.TAG_NAME == null }
+                    }
                 }
                 steps {
                     echo 'Hello World'
