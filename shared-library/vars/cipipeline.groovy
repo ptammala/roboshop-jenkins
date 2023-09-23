@@ -38,11 +38,12 @@ def call(message)
                 }
             }
             stage('Release') {
+                when {
+                    expression { env.TAG_NAME ==~ "*." }
+                }
 
                 steps {
-                    when {
-                        expression { env.TAG_NAME ==~ "*." }
-                    }
+
                     echo 'Hello World'
                     sh 'env'
 
