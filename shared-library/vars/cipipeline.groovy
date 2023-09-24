@@ -11,7 +11,7 @@ def call() {
                     env.branch_name = $"(env.BRANCH_NAME)"
                 }
                 checkout scmGit(
-                        branches: [[name: "refs/tags/v3.0"]],
+                        branches: [[name: branch_name ]],
                         userRemoteConfigs: [[ url: "https://github.com/ptammala/${component}" ]]
                 )
 
