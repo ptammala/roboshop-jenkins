@@ -15,7 +15,6 @@ def call() {
                         userRemoteConfigs: [[ url: "https://github.com/ptammala/${component}" ]]
                 )
 
-Prakash
                 stage('Compile Code') {
                     common.compile()
                 }
@@ -33,7 +32,3 @@ Prakash
                 }
             }
 }
-//kjlb
-
-///
-////Prakash Tammala
